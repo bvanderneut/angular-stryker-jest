@@ -1,81 +1,23 @@
-# AngularJest
+# Angular with Stryker and Jest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+Smal app for demonstrating Angular working with Stryker and Jest.
 
-# Setup
+## Introduction
 
-To create the project, the following commands were used:
+Did the following steps to create this little project
 
-```bash
-ng new angular-jest
-cd angular-jest
-npm remove @types/jasmine @types/jasminewd2 jasmine-core jasmine-spec-reporter karma karma-chrome-launcher karma-coverage-istanbul-reporter karma-jasmine karma-jasmine-html-reporter protractor
-npm install -D jest jest-preset-angular @types/jest
-rm -r e2e
-rm src/test.ts src/karma.conf.js
-```
+1. I cloned this repro:
+   https://github.com/wtho/jest-angular-example
+1. Installed Stryker `npm install -g stryker-cli`
+1. Initalised Stryker `stryker init`
+1. Removed `"@stryker-mutator/karma-runner": "^3.3.1"` from package.json
+1. installed this package `npm install --save-dev jest-environment-jsdom-sixteen`
+1. Installed everything else `npm stall`
 
-and the following files have to be created:
+## To install
 
-## `jest.config.js`
-```ts
-module.exports = {
-  preset: 'jest-preset-angular',
-  setupFilesAfterEnv: ['<rootDir>/src/setupJest.ts']
-}
-```
+`npm install`
 
-## `tsconfig.spec.json`
-```json
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "types": [
-      "jest",
-      "node"
-    ]
-  },
-  "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
-  ]
-}
-```
+## To run stryker
 
-## `src/setupJest.ts`
-```ts
-import 'jest-preset-angular';
-import './jestGlobalMocks';
-```
-
-## `src/jestGlobalMocks.ts`
-```ts
-Object.defineProperty(document.body.style, 'transform', {
-  value: () => {
-    return 
-      enumerable: true,
-      configurable: true,
-    };
-  },
-});
-```
-
-Finally modify the scripts`package.json` to create a new job:
-```json
-{
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "lint": "ng lint",
-    "test": "jest"
-  }
-}
-```
-
-Now the jest can be run using `npm test`.
-
-
-
-"# angular-stryker-jest" 
+`stryker run`
