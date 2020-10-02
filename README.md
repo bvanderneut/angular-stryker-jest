@@ -12,7 +12,8 @@ Did the following steps to create this little project
 1. Initalised Stryker `stryker init`
 1. Removed `"@stryker-mutator/karma-runner": "^3.3.1"` from package.json
 1. installed this package `npm install --save-dev jest-environment-jsdom-sixteen`
-1. Installed everything else `npm stall`
+1. Added this to the package.json `"@nrwl/jest": "8.6.0"`
+1. Installed everything `npm stall`
 
 ## To install
 
