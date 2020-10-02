@@ -3,18 +3,18 @@
   "mutate": [
     "src/**/*.ts",
     "!src/**/*.spec.ts",
-    "!src/test.ts",
     "!src/environments/*.ts"
   ],
   "testRunner": "jest",
   "jest": {
     "projectType": "custom",
-    "configFile": "src/jest.config.js",
+    "configFile": "jest.config.js",
     "config": {
       "testEnvironment": "jest-environment-jsdom-sixteen"
     },
     "enableFindRelatedTests": true
   },
+  "tsconfigFile": "tsconfig.json",
   "reporters": [
     "progress",
     "clear-text",
