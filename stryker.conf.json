@@ -20,6 +20,6 @@
     "clear-text",
     "html"
   ],
-  "maxConcurrentTestRunners": 1,
+  "concurrency": 1,
   "coverageAnalysis": "off"
 }

@@ -30,7 +30,7 @@
     "@angular/language-service": "^9.0.0",
     "@nrwl/jest": "9.0.4",
     "@offeringsolutions/nx-karma-to-jest": "^0.1.3",
-    "@stryker-mutator/core": "^3.3.1",
+    "@stryker-mutator/core": "^4.0.0-beta.9",
     "@stryker-mutator/jest-runner": "^3.3.1",
     "@stryker-mutator/typescript": "^3.3.1",
     "@types/jest": "^25.1.2",
